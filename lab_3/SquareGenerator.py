@@ -47,4 +47,18 @@ print("Square Roots:", square_roots)
 generator = SquareGenerator()
 print(generator.generate_squares(1, 10))
 
+# Task 8 #
+from square_generator.square_generator import CubicGenerator
 
+generator = CubicGenerator()
+print(generator.generate_squares(1, 5))
+
+# Task 9 #
+from square_generator.square_generator import CubicGenerator
+
+try:
+    generator = CubicGenerator()
+    print(generator.generate_squares(1, 5))  # Geçerli aralık
+    print(generator.generate_squares(5, 1))  # Geçersiz aralık, ValueError fırlatır
+except ValueError as e:
+    print(f"Hata: {e}")
